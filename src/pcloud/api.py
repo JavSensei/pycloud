@@ -290,6 +290,11 @@ class PyCloud(object):
     def downloadfileasync(self, **kwargs):
         return self._do_request("downloadfileasync", **kwargs)
 
+    @RequiredParameterCheck(("url",))
+    def getpublinkdownload(self, **kwargs):
+        return self._do_request("getpublinkdownload", **kwargs)
+
+
     @RequiredParameterCheck(("path", "fileid"))
     def copyfile(self, **kwargs):
         return self._do_request("copyfile", **kwargs)
